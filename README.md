@@ -21,18 +21,16 @@ An interactive AI assistant built with **Streamlit** and **LangChain** to help u
 - **LangChain** – for chaining LLM-based question generation, evaluation, and answer improvement
 - **LLMs** – used through LangChain chains for generating questions, evaluating responses, and suggesting improvements
 
-📂 Project Structure
-bash
-Copy
-Edit
+## 📁 Project Structure
+
+```
 .
-├── chains/                  # LangChain chains for question generation, evaluation, and suggestions
-├── prompts/                 # Prompt templates for chains
-├── venv/                    # Virtual environment (not tracked)
-├── .env                     # Environment variables (e.g., API keys)
-├── config.py                # Configuration (e.g., LLM setup, environment loading)
-├── main.py                  # Main Streamlit app
-├── requirements.txt         # Python dependencies
+├── app.py                         # Main Streamlit app
+├── chains/
+│   ├── question_chain.py         # Question generation chain
+│   ├── evaluation_chain.py       # Answer evaluation chain
+│   └── better_answer_chain.py    # Improved answer suggestion chain
+└── README.md                     # This file
 ```
 
 ## 🔧 Setup Instructions
