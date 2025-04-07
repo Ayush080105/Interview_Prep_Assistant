@@ -1,7 +1,3 @@
-Sure! Here's a `README.md` for your **Interview Preparation AI** project:
-
----
-
 # 🎯 Interview Preparation AI
 
 An interactive AI assistant built with **Streamlit** and **LangChain** to help users prepare for technical or behavioral job interviews. The app generates tailored questions, evaluates user responses, and suggests improved answers using advanced LLM-based chains.
@@ -80,6 +76,3 @@ Feel free to submit issues or pull requests! Suggestions for new question types,
 
 MIT License
 
----
-
-Let me know if you’d like a logo, badges, or enhancements to make it GitHub-ready!
