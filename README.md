@@ -1,77 +1,88 @@
-# 🎯 Interview Preparation AI
+🎯 Interview Preparation AI
+An interactive AI-powered assistant built using Streamlit and LangChain to help users practice for job interviews. The app generates dynamic questions, evaluates your answers, and suggests improvements — making your preparation smarter and more effective.
 
-An interactive AI assistant built with **Streamlit** and **LangChain** to help users prepare for technical or behavioral job interviews. The app generates tailored questions, evaluates user responses, and suggests improved answers using advanced LLM-based chains.
-
-## 🚀 Features
-
-- 📌 Choose a job role and question type (technical or behavioral)
-- 🤖 AI-generated interview questions based on your role
-- 📝 Input your answers directly in the app
-- ✅ Get real-time evaluation of your answers
-- 💡 Receive AI-suggested better answers for continuous learning
-- 🔁 Continue the interview with multiple rounds
-
-## 🛠️ Tech Stack
-
-- **Streamlit** – for building the interactive web UI
-- **LangChain** – for chaining LLM-based question generation, evaluation, and answer improvement
-- **LLMs** – used through LangChain chains for generating questions, evaluating responses, and suggesting improvements
-
-## 📁 Project Structure
-
-```
+📂 Project Structure
+bash
+Copy
+Edit
 .
-├── app.py                         # Main Streamlit app
-├── chains/
-│   ├── question_chain.py         # Question generation chain
-│   ├── evaluation_chain.py       # Answer evaluation chain
-│   └── better_answer_chain.py    # Improved answer suggestion chain
-└── README.md                     # This file
-```
+├── chains/                  # LangChain chains for question generation, evaluation, and suggestions
+├── prompts/                 # Prompt templates for chains
+├── venv/                    # Virtual environment (not tracked)
+├── .env                     # Environment variables (e.g., API keys)
+├── config.py                # Configuration (e.g., LLM setup, environment loading)
+├── main.py                  # Main Streamlit app
+├── requirements.txt         # Python dependencies
+🚀 Features
+✅ Role-specific interview question generation (e.g., "ML Intern")
 
-## 🔧 Setup Instructions
+🔄 Choose question type: technical or behavioral
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/yourusername/interview-prep-ai.git
-   cd interview-prep-ai
-   ```
+📋 Answer submission with real-time feedback
 
-2. **Create a virtual environment:**
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-   ```
+📈 Automatic evaluation with scoring or analysis
 
-3. **Install dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
+💡 Improved answer suggestions using LLMs
 
-4. **Run the app:**
-   ```bash
-   streamlit run app.py
-   ```
+🧠 Conversation memory for better continuity
 
-## 🧠 Chains Overview
+🛠️ Getting Started
+1. Clone the repository
+bash
+Copy
+Edit
+git clone https://github.com/yourusername/interview-prep-ai.git
+cd interview-prep-ai
+2. Create and activate a virtual environment
+bash
+Copy
+Edit
+python -m venv venv
+source venv/bin/activate      # Windows: venv\Scripts\activate
+3. Install dependencies
+bash
+Copy
+Edit
+pip install -r requirements.txt
+4. Add your environment variables
+Create a .env file with your API keys, for example:
 
-- **`get_question_chain()`** – Generates a role-specific interview question.
-- **`get_evaluation_chain()`** – Evaluates the user's answer based on pre-defined criteria.
-- **`get_better_answer_chain()`** – Suggests an improved version of the user's answer.
+ini
+Copy
+Edit
+OPENAI_API_KEY=your_openai_key_here
+5. Run the app
+bash
+Copy
+Edit
+streamlit run main.py
+🧠 Core Components
+🔹 chains/
+question_chain.py: Generates role-specific questions.
 
-## 📌 Example Use Case
+evaluation_chain.py: Evaluates answers based on criteria.
 
-1. Enter "ML Intern" as the job role.
-2. Select **Technical** questions.
-3. Click **Start Interview**.
-4. Respond to the AI-generated question.
-5. View the evaluation and suggested better answer.
-6. Proceed to the next question to continue your practice session.
+better_answer_chain.py: Generates improved answers.
 
-## 🙌 Contributions
+🔹 prompts/
+Stores prompt templates for chaining and customization.
 
-Feel free to submit issues or pull requests! Suggestions for new question types, evaluation criteria, or improvements to the chains are welcome.
+🔹 config.py
+Loads API keys and configures LLM providers.
 
-## 📜 License
+📌 Example Workflow
+Input a job role (e.g., "ML Intern").
 
+Choose between technical or behavioral questions.
+
+Answer the question shown in the app.
+
+Get an AI evaluation and a better suggested response.
+
+Continue the interview with a new question.
+
+📃 License
 MIT License
+
+🙌 Contributions
+Pull requests and ideas are welcome! Want to add new question types, improve evaluation logic, or integrate new LLMs? Go for it.
